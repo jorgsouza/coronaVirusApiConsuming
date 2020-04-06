@@ -7,6 +7,7 @@ import (
 	"io/ioutil"
 	"net/http"
 	"os"
+	"os/exec"
 	"strings"
 )
 
@@ -19,9 +20,11 @@ func main() {
 
 		switch choose {
 		case 1:
+			commandCmd()
 			fmt.Println("")
 			submenu()
 		case 2:
+			commandCmd()
 			fmt.Println("Showing all Coronavirus API data")
 			coronaDataAllCountry()
 		case 3:
@@ -29,7 +32,9 @@ func main() {
 			os.Exit(0)
 		default:
 			fmt.Println("Invalid command")
-			os.Exit(-1)
+			commandCmd()
+			fmt.Println("You entered an invalid option")
+			fmt.Println("")
 		}
 	}
 }
@@ -37,13 +42,14 @@ func main() {
 func intro() {
 	//
 	fmt.Println("Exercise on how to extract data from an API.\nI am using an open data API on Coronavirus.")
+	fmt.Println("Program Version: 1.0")
 }
 
 func menu() {
 	//program menu
-	fmt.Println("Which country do you want to know Coronavirus data")
-	fmt.Println("1 - Country specific data")
-	fmt.Println("2 - Or data from all countries")
+	fmt.Println("Choose Coronavirus data for... ")
+	fmt.Println("1 - ...a specific country")
+	fmt.Println("2 - ...or data from all countries")
 	fmt.Println("3 - Exit")
 }
 
@@ -96,7 +102,7 @@ func coronaDataOnlyOne() {
 	//	data, _ := ioutil.ReadAll(response.Body)
 	//	fmt.Println(string(data))
 	//}
-	fmt.Println("\nShutting down...")
+	fmt.Println("\nClosing connection with API...")
 }
 
 func coronaDataAllCountry() {
@@ -125,5 +131,11 @@ func coronaDataAllCountry() {
 	//	data, _ := ioutil.ReadAll(response.Body)
 	//	fmt.Println(string(data))
 	//}
-	fmt.Println("\nShutting down...")
+	fmt.Println("\nClosing connection with API...")
+}
+
+func commandCmd()  {
+	cmd := exec.Command("cmd", "/c", "cls")
+	cmd.Stdout = os.Stdout
+	cmd.Run()
 }
