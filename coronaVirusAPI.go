@@ -16,7 +16,7 @@ func main() {
 	fmt.Println("")
 	for {
 		menu()
-		choose := startmenu()
+		choose := startMenu()
 
 		switch choose {
 		case 1:
@@ -58,7 +58,7 @@ func submenu() {
 	coronaDataOnlyOne()
 }
 
-func startmenu() int {
+func startMenu() int {
 	//collect the country name
 	var requestMenu int
 	fmt.Scan(&requestMenu)
