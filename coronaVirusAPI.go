@@ -93,15 +93,6 @@ func coronaDataOnlyOne() {
 			fmt.Println("\nRequested by:", string(data))
 		}
 	}
-	//jsonData := map[string]string{"firtname": "Nic", "lasname": "Raboy"}
-	//jasonValue, _ := json.Marshal(jsonData)
-	//response, err = http.Post("https://httpbin.org/post", "application/json", bytes.NewBuffer(jasonValue))
-	//if err != nil {
-	//	fmt.Println("The request failed \n", err)
-	//} else {
-	//	data, _ := ioutil.ReadAll(response.Body)
-	//	fmt.Println(string(data))
-	//}
 	fmt.Println("\nClosing connection with API...")
 }
 
@@ -122,15 +113,6 @@ func coronaDataAllCountry() {
 			fmt.Println("\nRequested by:", string(data))
 		}
 	}
-	//jsonData := map[string]string{"firtname": "Nic", "lasname": "Raboy"}
-	//jasonValue, _ := json.Marshal(jsonData)
-	//response, err = http.Post("https://httpbin.org/post", "application/json", bytes.NewBuffer(jasonValue))
-	//if err != nil {
-	//	fmt.Println("The request failed \n", err)
-	//} else {
-	//	data, _ := ioutil.ReadAll(response.Body)
-	//	fmt.Println(string(data))
-	//}
 	fmt.Println("\nClosing connection with API...")
 }
 
