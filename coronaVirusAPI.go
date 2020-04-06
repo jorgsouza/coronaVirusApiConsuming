@@ -42,7 +42,7 @@ func main() {
 func intro() {
 	//
 	fmt.Println("Exercise on how to extract data from an API.\nI am using an open data API on Coronavirus.")
-	fmt.Println("Program Version: 1.0")
+	fmt.Println("Program Version: 1.1")
 }
 
 func menu() {
@@ -134,7 +134,7 @@ func coronaDataAllCountry() {
 	fmt.Println("\nClosing connection with API...")
 }
 
-func commandCmd()  {
+func commandCmd() {
 	cmd := exec.Command("cmd", "/c", "cls")
 	cmd.Stdout = os.Stdout
 	cmd.Run()
